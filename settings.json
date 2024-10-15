@@ -1,7 +1,4 @@
 {
-  "vscode_custom_css.imports": [
-    "file:///c:/Users/tonyb/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
-  ],
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
@@ -10,9 +7,14 @@
   "animations.Install-Method": "Custom CSS and JS",
   "animations.Scrolling": "Fade",
   "animations.Tabs": "Slide",
+  "bookmarks.keepBookmarksOnLineDelete": true,
   "catppuccin-icons.hidesExplorerArrows": true,
   "cody.autocomplete.formatOnAccept": true,
   "cody.commandCodeLenses": true,
+  "cody.telemetry.level": "off",
+  "debug.toolBarLocation": "docked",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.renderSideBySide": true,
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -20,8 +22,14 @@
   "editor.fontFamily": "'MesloLGS Nerd Font', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.indentation": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.lightbulb.enabled": "off",
+  "editor.lineNumbers": "off",
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "gutter",
@@ -29,6 +37,7 @@
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.tabSize": 2,
+  "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -38,12 +47,33 @@
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
+  "gitlens.telemetry.enabled": false,
+  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "magit.forge-enabled": true,
   "magit.quick-switch-enabled": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
   "remote.autoForwardPortsSource": "hybrid",
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.preferences.jsxAttributeCompletionStyle": "braces",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua",
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.wslDistribution": "Ubuntu",
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/tonyb/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+  ],
   "whichkey.bindingOverrides": [
     {
       "keys": "!",
@@ -86,18 +116,17 @@
       "position": -1
     },
     {
+      "command": "whichkey.repeatRecent",
       "keys": ">",
       "name": "Repeat recent",
-      "type": "command",
-      "command": "whichkey.repeatRecent"
+      "type": "command"
     },
     {
+      "command": "workbench.action.terminal.openNativeConsole",
       "keys": "/",
       "name": "Open new external terminal",
-      "type": "command",
-      "command": "workbench.action.terminal.openNativeConsole"
+      "type": "command"
     },
-
     // +BUFFER
     {
       "command": "workbench.action.pinEditor",
@@ -111,18 +140,14 @@
       "name": "Unpin buffer",
       "type": "command"
     },
-
     // +Code
     {
-      "keys": "c",
-      "name": "+Code",
-      "type": "bindings",
       "bindings": [
         {
+          "command": "editor.action.codeAction",
           "key": "a",
           "name": "Code action",
-          "type": "command",
-          "command": "editor.action.codeAction"
+          "type": "command"
         },
         {
           "command": "workbench.panel.chat.view.copilot.focus",
@@ -131,47 +156,49 @@
           "type": "command"
         },
         {
+          "command": "editor.action.format",
           "key": "f",
           "name": "Format region or buffer",
-          "type": "command",
-          "command": "editor.action.format"
+          "type": "command"
         },
         {
+          "command": "editor.action.formatDocument",
           "key": "F",
           "name": "Format buffer",
-          "type": "command",
-          "command": "editor.action.formatDocument"
+          "type": "command"
         },
         {
+          "command": "editor.action.rename",
           "key": "r",
           "name": "Rename symbol",
-          "type": "command",
-          "command": "editor.action.rename"
+          "type": "command"
         },
         {
+          "command": "fileutils.renameFile",
           "key": "R",
           "name": "Rename file",
-          "type": "command",
-          "command": "fileutils.renameFile"
+          "type": "command"
         },
         {
+          "command": "editor.action.clipboardPasteAction",
           "key": "p",
           "name": "Paste from clipboard",
-          "type": "command",
-          "command": "editor.action.clipboardPasteAction"
+          "type": "command"
         },
         {
-          "key": "y",
-          "name": "Yank to clipboard",
-          "type": "commands",
           "commands": [
             "editor.action.clipboardCopyAction",
             "vscode-neovim.escape"
-          ]
+          ],
+          "key": "y",
+          "name": "Yank to clipboard",
+          "type": "commands"
         }
-      ]
+      ],
+      "keys": "c",
+      "name": "+Code",
+      "type": "bindings"
     },
-
     // +DEBUG
     {
       "command": "editor.debug.action.conditionalBreakpoint",
@@ -250,7 +277,6 @@
       "keys": "d.o",
       "position": -1
     },
-
     // +FILE
     {
       "command": "fileutils.renameFile",
@@ -272,256 +298,256 @@
       "type": "commands"
     },
     {
+      "command": "magit.dispatch",
       "keys": "g.?",
       "name": "Magit dispatch",
-      "type": "command",
-      "command": "magit.dispatch"
+      "type": "command"
     },
     {
+      "command": "git.commitAmend",
       "keys": "g.a",
       "name": "Amend commit",
-      "type": "command",
-      "command": "git.commitAmend"
+      "type": "command"
     },
     {
-      "keys": "g.b",
-      "name": "+Branch",
-      "type": "bindings",
       "bindings": [
         {
+          "command": "git.checkout",
           "key": "b",
           "name": "Checkout",
-          "type": "command",
-          "command": "git.checkout"
+          "type": "command"
         },
         {
+          "command": "git.deleteBranch",
           "key": "d",
           "name": "Delete",
-          "type": "command",
-          "command": "git.deleteBranch"
+          "type": "command"
         },
         {
+          "command": "git.renameBranch",
           "key": "r",
           "name": "Rename",
-          "type": "command",
-          "command": "git.renameBranch"
+          "type": "command"
         },
         {
+          "command": "git.rebase",
           "key": "R",
           "name": "Rebase",
-          "type": "command",
-          "command": "git.rebase"
+          "type": "command"
         }
-      ]
+      ],
+      "keys": "g.b",
+      "name": "+Branch",
+      "type": "bindings"
     },
     {
+      "command": "git.openChange",
       "keys": "g.d",
       "name": "Diff",
-      "type": "command",
-      "command": "git.openChange"
+      "type": "command"
     },
     {
+      "command": "magit.status",
       "keys": "g.g",
       "name": "Git status",
-      "type": "command",
-      "command": "magit.status"
+      "type": "command"
     },
     {
+      "command": "workbench.view.scm",
       "keys": "g.G",
       "name": "Git source control",
-      "type": "command",
-      "command": "workbench.view.scm"
+      "type": "command"
     },
     {
+      "command": "magit.log-file",
       "keys": "g.l",
       "name": "Log file",
-      "type": "command",
-      "command": "magit.log-file"
+      "type": "command"
     },
     {
+      "command": "magit.logging",
       "keys": "g.L",
       "name": "Log branch(es)",
-      "type": "command",
-      "command": "magit.logging"
+      "type": "command"
     },
     {
+      "command": "gitlens.openCommitOnRemote",
       "keys": "g.o",
       "name": "Open commit on remote",
-      "type": "command",
-      "command": "gitlens.openCommitOnRemote"
+      "type": "command"
     },
     {
+      "command": "git.pull",
       "keys": "g.p",
       "name": "Pull",
-      "type": "command",
-      "command": "git.pull"
+      "type": "command"
     },
     {
+      "command": "git.push",
       "keys": "g.P",
       "name": "Push",
-      "type": "command",
-      "command": "git.push"
+      "type": "command"
     },
     {
+      "command": "git.stage",
       "keys": "g.s",
       "name": "Stage",
-      "type": "command",
-      "command": "git.stage"
+      "type": "command"
     },
     {
+      "command": "git.stageAll",
       "keys": "g.S",
       "name": "Stage all",
-      "type": "command",
-      "command": "git.stageAll"
+      "type": "command"
     },
     {
+      "command": "git.unstage",
       "keys": "g.u",
       "name": "Unstage",
-      "type": "command",
-      "command": "git.unstage"
+      "type": "command"
     },
     {
+      "command": "git.unstageAll",
       "keys": "g.U",
       "name": "Unstage all",
-      "type": "command",
-      "command": "git.unstageAll"
+      "type": "command"
     },
     {
+      "command": "git.clean",
       "keys": "g.x",
       "name": "Discard changes in current file",
-      "type": "command",
-      "command": "git.clean"
+      "type": "command"
     },
     {
+      "command": "git.cleanAll",
       "keys": "g.X",
       "name": "Discard all changes",
-      "type": "command",
-      "command": "git.cleanAll"
+      "type": "command"
     },
     {
+      "command": "git.stash",
       "keys": "g.z",
       "name": "Stash",
-      "type": "command",
-      "command": "git.stash"
+      "type": "command"
     },
     {
+      "command": "git.stashApply",
       "keys": "g.Z",
       "name": "Stash apply",
-      "type": "command",
-      "command": "git.stashApply"
+      "type": "command"
     },
     {
-      "keys": "l",
-      "name": "+Logging",
-      "type": "bindings",
       "bindings": [
         {
+          "command": "turboConsoleLog.commentAllLogMessages",
           "key": "c",
           "name": "Comment out all log messages",
-          "type": "command",
-          "command": "turboConsoleLog.commentAllLogMessages"
+          "type": "command"
         },
         {
+          "command": "turboConsoleLog.displayLogMessage",
           "key": "l",
           "name": "Log message",
-          "type": "command",
-          "command": "turboConsoleLog.displayLogMessage"
+          "type": "command"
         },
         {
+          "command": "turboConsoleLog.deleteAllLogMessages",
           "key": "d",
           "name": "Delete log messages",
-          "type": "command",
-          "command": "turboConsoleLog.deleteAllLogMessages"
+          "type": "command"
         },
         {
+          "command": "turboConsoleLog.uncommentAllLogMessages",
           "key": "u",
           "name": "Uncomment all log messages",
-          "type": "command",
-          "command": "turboConsoleLog.uncommentAllLogMessages"
+          "type": "command"
         }
-      ]
+      ],
+      "keys": "l",
+      "name": "+Logging",
+      "type": "bindings"
     },
     {
-      "keys": "m",
-      "name": "+Marks/Bookmarks",
-      "type": "bindings",
       "bindings": [
         {
+          "command": "bookmarks.clear",
           "key": "c",
           "name": "Clear marks",
-          "type": "command",
-          "command": "bookmarks.clear"
+          "type": "command"
         },
         {
+          "command": "bookmarks.clearFromAllFiles",
           "key": "C",
           "name": "Clear all marks",
-          "type": "command",
-          "command": "bookmarks.clearFromAllFiles"
+          "type": "command"
         },
         {
+          "command": "bookmarks.listFromAllFiles",
           "key": "l",
           "name": "List marks",
-          "type": "command",
-          "command": "bookmarks.listFromAllFiles"
+          "type": "command"
         },
         {
+          "command": "bookmarks.jumpToNext",
           "key": "n",
           "name": "Jump to next",
-          "type": "command",
-          "command": "bookmarks.jumpToNext"
+          "type": "command"
         },
         {
+          "command": "bookmarks.jumpToPrevious",
           "key": "p",
           "name": "Jump to previous",
-          "type": "command",
-          "command": "bookmarks.jumpToPrevious"
+          "type": "command"
         },
         {
+          "command": "bookmarks.toggle",
           "key": "t",
           "name": "Toggle mark",
-          "type": "command",
-          "command": "bookmarks.toggle"
+          "type": "command"
         },
         {
+          "command": "bookmarks.toggleLabeled",
           "key": "T",
           "name": "Toggle labled mark",
-          "type": "command",
-          "command": "bookmarks.toggleLabeled"
+          "type": "command"
         }
-      ]
+      ],
+      "keys": "m",
+      "name": "+Marks/Bookmarks",
+      "type": "bindings"
     },
     {
+      "command": "fuzzySearch.activeTextEditorWithCurrentSelection",
       "keys": "s.b",
       "name": "Fuzzy search in current buffer",
-      "type": "command",
-      "command": "fuzzySearch.activeTextEditorWithCurrentSelection"
+      "type": "command"
     },
     {
-      "keys": "s.B",
-      "name": "Fuzzy search with selection in current buffer",
-      "type": "commands",
       "commands": [
         "editor.action.addSelectionToNextFindMatch",
         "fuzzySearch.activeTextEditorWithCurrentSelection"
-      ]
+      ],
+      "keys": "s.B",
+      "name": "Fuzzy search with selection in current buffer",
+      "type": "commands"
     },
     {
+      "command": "workbench.action.quickOpen",
       "keys": "s.f",
       "name": "Find file in quick open",
-      "type": "command",
-      "command": "workbench.action.quickOpen"
+      "type": "command"
     },
     {
+      "command": "file-browser.open",
       "keys": "s.F",
       "name": "Find file in file browser",
-      "type": "command",
-      "command": "file-browser.open"
+      "type": "command"
     },
     {
+      "command": "markdown.extension.checkTaskList",
       "keys": "t.x",
       "name": "[x] Markdown Checklist",
-      "type": "command",
-      "command": "markdown.extension.checkTaskList"
+      "type": "command"
     },
     {
       "command": "workbench.action.closeAllGroups",
@@ -548,9 +574,10 @@
       "type": "command"
     }
   ],
-  "whichkey.sortOrder": "nonNumberFirst",
   "whichkey.showIcons": true,
+  "whichkey.sortOrder": "nonNumberFirst",
   "window.commandCenter": false,
+  "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
     // Colors to match - https://github.com/ayu-theme/ayu-colors?tab=readme-ov-file
     "editorSuggestWidget.selectedBackground": "#c1d6eb40",
@@ -563,35 +590,9 @@
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.layoutControl.enabled": false,
+  "workbench.list.defaultFindMatchType": "contiguous",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.renderIndentGuides": "none",
-  "vscode-neovim.useWSL": true,
-  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
-  "vscode-neovim.compositeKeys": {
-    "jk": {
-      "command": "vscode-neovim.escape"
-    }
-  },
-  "vscode-neovim.wslDistribution": "Ubuntu",
-  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua",
-  "editor.lineNumbers": "off",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.preferences.jsxAttributeCompletionStyle": "braces",
-  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
-  "editor.linkedEditing": true,
-  "gitlens.telemetry.enabled": false,
-  "cody.telemetry.level": "off",
-  "diffEditor.renderSideBySide": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "markdown.updateLinksOnFileMove.enabled": "always",
-  "workbench.list.defaultFindMatchType": "contiguous",
-  "explorer.autoReveal": false,
-  "bookmarks.keepBookmarksOnLineDelete": true,
-  "debug.toolBarLocation": "docked",
-  "security.allowedUNCHosts": ["wsl.localhost"],
-  "security.workspace.trust.untrustedFiles": "open"
+  "workbench.tree.renderIndentGuides": "none"
 }
