@@ -585,7 +585,15 @@
     "list.focusBackground": "#409FFF40",
     "list.hoverBackground": "#409FFF40",
     "list.inactiveSelectionBackground": "#409FFF40",
-    "terminalCursor.foreground": "#FFCC66"
+    "terminalCursor.foreground": "#FFCC66",
+    "tab.activeBorderTop": "#FFCC66", // if using CSS-JS Loader
+    "editorIndentGuide.activeBackground1": "#FFCC66",
+    "editorBracketPairGuide.activeBackground1": "#FFCC66",
+    "editorBracketPairGuide.activeBackground2": "#FFCC66",
+    "editorBracketPairGuide.activeBackground3": "#FFCC66",
+    "editorBracketPairGuide.activeBackground4": "#FFCC66",
+    "editorBracketPairGuide.activeBackground5": "#FFCC66",
+    "editorBracketPairGuide.activeBackground6": "#FFCC66",
   },
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "catppuccin-frappe",
@@ -612,4 +620,5 @@
     },
   },
   "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}",
+  "editor.bracketPairColorization.enabled": false,
 }
