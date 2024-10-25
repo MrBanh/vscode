@@ -129,6 +129,12 @@
     },
     // +BUFFER
     {
+      "command": "workbench.action.closeEditorsInGroup",
+      "keys": "b.d",
+      "name": "Delete editors in group",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.pinEditor",
       "keys": "b.p",
       "name": "Pin buffer",
