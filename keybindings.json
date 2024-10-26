@@ -444,6 +444,11 @@
     "when": "inDiffEditor"
   },
   {
+    "key": "escape",
+    "command": "git.openFile",
+    "when": "inDiffEditor"
+  },
+  {
     "key": "f12",
     "command": "workbench.action.debug.stepOut",
     "when": "debugState == 'stopped'"
