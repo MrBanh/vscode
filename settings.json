@@ -599,7 +599,7 @@
     "editorBracketPairGuide.activeBackground3": "#FFCC66",
     "editorBracketPairGuide.activeBackground4": "#FFCC66",
     "editorBracketPairGuide.activeBackground5": "#FFCC66",
-    "editorBracketPairGuide.activeBackground6": "#FFCC66",
+    "editorBracketPairGuide.activeBackground6": "#FFCC66"
   },
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "catppuccin-frappe",
@@ -608,23 +608,9 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.renderIndentGuides": "none"
-  "workbench.activityBar.location": "bottom",
+  "workbench.tree.renderIndentGuides": "none",
   "workbench.editor.showTabs": "single",
   "breadcrumbs.symbolPath": "off",
-  "terminal.integrated.profiles.osx": {
-    "zsh": {
-      "path": "zsh",
-      "args": [
-        "-l"
-      ]
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux",
-      "args": ["new-session", "-A", "-s", "main"]
-    },
-  },
   "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}",
-  "editor.bracketPairColorization.enabled": false,
+  "editor.bracketPairColorization.enabled": false
 }
