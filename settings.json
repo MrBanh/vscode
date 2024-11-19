@@ -180,12 +180,6 @@
           "type": "command"
         },
         {
-          "command": "fileutils.renameFile",
-          "key": "R",
-          "name": "Rename file",
-          "type": "command"
-        },
-        {
           "command": "editor.action.clipboardPasteAction",
           "key": "p",
           "name": "Paste from clipboard",
@@ -285,10 +279,13 @@
     },
     // +FILE
     {
-      "command": "fileutils.renameFile",
+      "commands": [
+        "fileutils.renameFile",
+        "workbench.action.focusFirstEditorGroup"
+      ],
       "keys": "f.r",
       "name": "Rename file",
-      "type": "command"
+      "type": "commands"
     },
     {
       "keys": "f.R",
