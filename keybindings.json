@@ -295,7 +295,7 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "(activeEditorGroupEmpty || activeEditor ==='workbench.editors.errorEditor') && !whichkeyVisible && !inCommandsPicker && !inQuickOpen"
+    "when": "(activeEditorGroupEmpty || activeEditor ==='workbench.editors.errorEditor') && !whichkeyVisible && !inCommandsPicker && !inQuickOpen && !terminalFocusInAny"
   },
   {
     "key": "space",
