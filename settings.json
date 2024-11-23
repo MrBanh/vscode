@@ -10,7 +10,6 @@
   "bookmarks.keepBookmarksOnLineDelete": true,
   "catppuccin-icons.hidesExplorerArrows": true,
   "cody.autocomplete.formatOnAccept": true,
-  "cody.commandCodeLenses": true,
   "cody.telemetry.level": "off",
   "debug.toolBarLocation": "docked",
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -609,5 +608,18 @@
   "workbench.editor.showTabs": "single",
   "breadcrumbs.symbolPath": "off",
   "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}",
-  "editor.bracketPairColorization.enabled": false
+  "editor.bracketPairColorization.enabled": false,
+  "gitlens.views.scm.grouped.views": {
+    "commits": false,
+    "branches": false,
+    "remotes": false,
+    "stashes": false,
+    "tags": false,
+    "worktrees": false,
+    "contributors": false,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": false
+  },
+  "git.autofetch": true
 }
