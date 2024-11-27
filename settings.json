@@ -9,8 +9,6 @@
   "animations.Tabs": "Slide",
   "bookmarks.keepBookmarksOnLineDelete": true,
   "catppuccin-icons.hidesExplorerArrows": true,
-  "cody.autocomplete.formatOnAccept": true,
-  "cody.telemetry.level": "off",
   "debug.toolBarLocation": "docked",
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.renderSideBySide": true,
@@ -621,5 +619,6 @@
     "searchAndCompare": false,
     "launchpad": false
   },
-  "git.autofetch": true
+  "git.autofetch": true,
+  "typeChallenges.workspaceFolder": ""
 }
