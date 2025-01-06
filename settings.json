@@ -124,11 +124,36 @@
       "name": "Open new external terminal",
       "type": "command"
     },
+    {
+      "commands": [
+        "editor.action.clipboardPasteAction",
+        "vscode-neovim.escape"
+      ],
+      "keys": "P",
+      "name": "Paste from clipboard",
+      "type": "commands"
+    },
+    {
+      "commands": [
+        "editor.action.clipboardCopyAction",
+        "vscode-neovim.escape"
+      ],
+      "keys": "Y",
+      "name": "Yank to clipboard",
+      "type": "commands"
+    },
+    
     // +BUFFER
     {
+      "command": "workbench.action.closeOtherEditors",
+      "keys": "b.c",
+      "name": "Close editors in group",
+      "type": "command"
+    },
+    {
       "command": "workbench.action.closeEditorsInGroup",
-      "keys": "b.d",
-      "name": "Delete editors in group",
+      "keys": "b.C",
+      "name": "Close editors in group",
       "type": "command"
     },
     {
@@ -143,6 +168,7 @@
       "name": "Unpin buffer",
       "type": "command"
     },
+    
     // +Code
     {
       "bindings": [
@@ -196,6 +222,7 @@
       "name": "+Code",
       "type": "bindings"
     },
+    
     // +DEBUG
     {
       "command": "editor.debug.action.conditionalBreakpoint",
@@ -274,7 +301,20 @@
       "keys": "d.o",
       "position": -1
     },
+    
     // +FILE
+    {
+      "command": "workbench.action.quickOpen",
+      "keys": "f.f",
+      "name": "Find file in quick open",
+      "type": "command"
+    },
+    {
+      "command": "file-browser.open",
+      "keys": "f.F",
+      "name": "Find file relative to active file",
+      "type": "command"
+    },
     {
       "commands": [
         "fileutils.renameFile",
@@ -297,12 +337,8 @@
       "name": "Delete file",
       "type": "commands"
     },
-    {
-      "command": "magit.dispatch",
-      "keys": "g.?",
-      "name": "Magit dispatch",
-      "type": "command"
-    },
+
+    // +GIT
     {
       "command": "git.commitAmend",
       "keys": "g.a",
@@ -347,27 +383,28 @@
       "type": "command"
     },
     {
-      "command": "workbench.view.scm",
+      // https://marketplace.visualstudio.com/items?itemName=TomPollak.lazygit-vscode
+      "command": "lazygit-vscode.toggle",
       "keys": "g.g",
-      "name": "Git source control",
-      "type": "command"
-    },
-    {
-      "command": "magit.status",
-      "keys": "g.G",
       "name": "Git status",
       "type": "command"
     },
     {
-      "command": "magit.log-file",
-      "keys": "g.l",
-      "name": "Log file",
+      "command": "workbench.view.scm",
+      "keys": "g.G",
+      "name": "git source control",
       "type": "command"
     },
     {
-      "command": "magit.logging",
-      "keys": "g.L",
-      "name": "Log branch(es)",
+      "command": "gitlens.showQuickFileHistory",
+      "keys": "g.h",
+      "name": "Git File History",
+      "type": "command"
+    },
+    {
+      "command": "gitlens.gitCommands.history",
+      "keys": "g.H",
+      "name": "Git History Log",
       "type": "command"
     },
     {
@@ -436,6 +473,8 @@
       "name": "Stash apply",
       "type": "command"
     },
+
+    // +LOGGING
     {
       "bindings": [
         {
@@ -467,6 +506,8 @@
       "name": "+Logging",
       "type": "bindings"
     },
+
+    // +MARKS/BOOKMARKS
     {
       "bindings": [
         {
@@ -516,21 +557,8 @@
       "name": "+Marks/Bookmarks",
       "type": "bindings"
     },
-    {
-      "command": "fuzzySearch.activeTextEditorWithCurrentSelection",
-      "keys": "s.b",
-      "name": "Fuzzy search in current buffer",
-      "type": "command"
-    },
-    {
-      "commands": [
-        "editor.action.addSelectionToNextFindMatch",
-        "fuzzySearch.activeTextEditorWithCurrentSelection"
-      ],
-      "keys": "s.B",
-      "name": "Fuzzy search with selection in current buffer",
-      "type": "commands"
-    },
+
+    // +SEARCH
     {
       "command": "workbench.action.quickOpen",
       "keys": "s.f",
@@ -540,9 +568,20 @@
     {
       "command": "file-browser.open",
       "keys": "s.F",
-      "name": "Find file in file browser",
+      "name": "Find file relative to active file",
       "type": "command"
     },
+    {
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch",
+        "workbench.action.findInFiles"
+      ],
+      "keys": "s.w",
+      "name": "Search word",
+      "type": "commands"
+    },
+
+    // MISC
     {
       "command": "markdown.extension.checkTaskList",
       "keys": "t.x",
@@ -567,12 +606,6 @@
       "name": "Maximize Editor Group and Hide Sidebar",
       "type": "command"
     },
-    {
-      "command": "workbench.action.evenEditorWidths",
-      "keys": "w.r",
-      "name": "Reset Editor Group Sizes",
-      "type": "command"
-    }
   ],
   "whichkey.showIcons": true,
   "whichkey.sortOrder": "nonNumberFirst",
