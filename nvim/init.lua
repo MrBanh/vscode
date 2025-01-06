@@ -66,10 +66,10 @@ set('x', 'K', ":move '<-2<CR>gv-gv", opts)
 set('n', 'J', 'mzJ`z')
 
 -- yank to system clipboard
-set({ 'n', 'v' }, '<leader>y', '"+y', opts)
+set({ 'n', 'v' }, '<leader>Y', '"+y', opts)
 
 -- paste from system clipboard
-set({ 'n', 'v' }, '<leader>p', '"+p', opts)
+set({ 'n', 'v' }, '<leader>P', '"+p', opts)
 
 -- Moving past folds
 local function moveCursor(direction)
