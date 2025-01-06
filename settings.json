@@ -47,8 +47,6 @@
   "gitlens.telemetry.enabled": false,
   "javascript.preferences.jsxAttributeCompletionStyle": "braces",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "magit.forge-enabled": true,
-  "magit.quick-switch-enabled": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
   "remote.autoForwardPortsSource": "hybrid",
   "security.allowedUNCHosts": ["wsl.localhost"],
