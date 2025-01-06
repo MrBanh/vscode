@@ -562,6 +562,15 @@
 
     // +SEARCH
     {
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch",
+        "workbench.action.findInFiles"
+      ],
+      "keys": "s.c",
+      "name": "Search word under cursor",
+      "type": "commands"
+    },
+    {
       "command": "workbench.action.quickOpen",
       "keys": "s.f",
       "name": "Find file in quick open",
@@ -575,7 +584,6 @@
     },
     {
       "commands": [
-        "editor.action.addSelectionToNextFindMatch",
         "workbench.action.findInFiles"
       ],
       "keys": "s.w",
