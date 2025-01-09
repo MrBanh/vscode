@@ -735,5 +735,7 @@
     "launchpad": false
   },
   "git.autofetch": true,
-  "typeChallenges.workspaceFolder": ""
+  "git.pullTags": false,
+  "typeChallenges.workspaceFolder": "",
+  "lazygit-vscode.autoMaximizeWindow": true,
 }
