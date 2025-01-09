@@ -304,7 +304,22 @@
       "position": -1
     },
     
-    // +FILE
+    // +FIND
+    {
+      "keys": "f",
+      "name": "+Find",
+      "type": "bindings",
+      "bindings": []
+    },
+    {
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch",
+        "workbench.action.findInFiles"
+      ],
+      "keys": "f.c",
+      "name": "Find word under cursor",
+      "type": "commands"
+    },
     {
       "command": "workbench.action.quickOpen",
       "keys": "f.f",
@@ -319,25 +334,82 @@
     },
     {
       "commands": [
+        "workbench.action.findInFiles"
+      ],
+      "keys": "f.w",
+      "name": "Find word",
+      "type": "commands"
+    },
+
+    // +FILE
+    {
+      "keys": "F",
+      "name": "+File",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "=",
+          "name": "Format file",
+          "type": "command",
+          "command": "editor.action.formatDocument"
+        },
+      ]
+    },
+    {
+      "command": "workbench.action.editor.changeLanguageMode",
+      "keys": "F.l",
+      "name": "Change file language",
+      "type": "commands"
+    },
+    {
+      "command": "quokka.createFile",
+      "keys": "F.n",
+      "name": "New Quokka File",
+      "type": "commands"
+    },
+    {
+      "commands": [
         "fileutils.renameFile",
         "workbench.action.focusFirstEditorGroup"
       ],
-      "keys": "f.r",
+      "keys": "F.r",
       "name": "Rename file",
       "type": "commands"
     },
     {
-      "keys": "f.R",
-      "position": -1
+      "keys": "F.t",
+      "name": "Show tree/explorer view",
+      "type": "command",
+      "command": "workbench.view.explorer"
+    },
+    {
+        "keys": "F.T",
+        "name": "Show active file in tree/explorer view",
+        "type": "command",
+        "command": "workbench.files.action.showActiveFileInExplorer"
     },
     {
       "commands": [
         "fileutils.removeFile",
         "workbench.action.focusFirstEditorGroup"
       ],
-      "keys": "f.x",
+      "keys": "F.x",
       "name": "Delete file",
       "type": "commands"
+    },
+    {
+      "commands": [
+        "workbench.action.localHistory.restoreViaPicker"
+      ],
+      "keys": "F.X",
+      "name": "Restore file",
+      "type": "commands"
+    },
+    {
+      "keys": "F.y",
+      "name": "Copy path of active file",
+      "type": "command",
+      "command": "workbench.action.files.copyPathOfActiveFile"
     },
 
     // +GIT
