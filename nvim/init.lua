@@ -71,21 +71,8 @@ set({ 'n', 'v' }, '<leader>Y', '"+y', opts)
 -- paste from system clipboard
 set({ 'n', 'v' }, '<leader>P', '"+p', opts)
 
--- Moving past folds
-local function moveCursor(direction)
-  if vim.fn.reg_recording() == '' and vim.fn.reg_executing() == '' then
-    return ('g' .. direction)
-  else
-    return direction
-  end
-end
-
-set('n', 'k', function()
-  return moveCursor 'k'
-end, { expr = true, remap = true })
-set('n', 'j', function()
-  return moveCursor 'j'
-end, { expr = true, remap = true })
+set('i', '<C-b>', '<ESC>^i', { desc = 'move beginning of line' })
+set('i', '<C-e>', '<End>', { desc = 'move end of line' })
 
 if vim.g.vscode then
   set({ 'n', 'x', 'i' }, '<C-m>', function()
