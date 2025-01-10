@@ -71,9 +71,6 @@ set({ 'n', 'v' }, '<leader>Y', '"+y', opts)
 -- paste from system clipboard
 set({ 'n', 'v' }, '<leader>P', '"+p', opts)
 
-set('i', '<C-b>', '<ESC>^i', { desc = 'move beginning of line' })
-set('i', '<C-e>', '<End>', { desc = 'move end of line' })
-
 if vim.g.vscode then
   set({ 'n', 'x', 'i' }, '<C-m>', function()
     require('vscode-multi-cursor').addSelectionToNextFindMatch()
