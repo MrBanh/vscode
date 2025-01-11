@@ -152,67 +152,67 @@ if vim.g.vscode then
   set('n', 'za', function()
     vscode.action 'editor.toggleFold'
   end, opts)
-
-  -------------
-  -- PLUGINS --
-  -------------
-  require('lazy').setup {
-    {
-      'folke/flash.nvim',
-      event = 'VeryLazy',
-      ---@type Flash.Config
-      opts = {},
-      keys = {
-        {
-          '<c-s>',
-          mode = { 'c' },
-          function()
-            require('flash').toggle()
-          end,
-          desc = 'Toggle Flash Search',
-        },
-      },
-    },
-    { -- Collection of various small independent plugins/modules
-      'echasnovski/mini.nvim',
-      config = function()
-        -- Better Around/Inside textobjects
-        --
-        -- Examples:
-        --  - va)  - [V]isually select [A]round [)]paren
-        --  - yinq - [Y]ank [I]nside [N]ext [']quote
-        --  - ci'  - [C]hange [I]nside [']quote
-        require('mini.ai').setup { n_lines = 500 }
-      end,
-    },
-    {
-      'kylechui/nvim-surround',
-      event = 'VeryLazy',
-      config = function()
-        require('nvim-surround').setup {
-          -- Configuration here, or leave empty to use defaults
-        }
-      end,
-    },
-    {
-      'michaeljsmith/vim-indent-object',
-    },
-    {
-      'inkarkat/vim-ReplaceWithRegister',
-      keys = {
-        { 'r', '<Plug>ReplaceWithRegisterOperator', desc = 'Replace with register' },
-        { 'r', '<Plug>ReplaceWithRegisterVisual', desc = 'Replace with register visual', mode = 'x' },
-        { 'rr', '<Plug>ReplaceWithRegisterLine', desc = 'Riplace with register line' },
-      },
-    },
-    { 'kana/vim-textobj-entire', dependencies = { 'kana/vim-textobj-user' } },
-    {
-      'vscode-neovim/vscode-multi-cursor.nvim',
-      event = 'VeryLazy',
-      cond = not not vim.g.vscode,
-      opts = {
-        default_mappings = false,
-      },
-    },
-  }
 end
+
+-------------
+-- PLUGINS --
+-------------
+require('lazy').setup {
+  {
+    'folke/flash.nvim',
+    event = 'VeryLazy',
+    ---@type Flash.Config
+    opts = {},
+    keys = {
+      {
+        '<c-s>',
+        mode = { 'c' },
+        function()
+          require('flash').toggle()
+        end,
+        desc = 'Toggle Flash Search',
+      },
+    },
+  },
+  { -- Collection of various small independent plugins/modules
+    'echasnovski/mini.nvim',
+    config = function()
+      -- Better Around/Inside textobjects
+      --
+      -- Examples:
+      --  - va)  - [V]isually select [A]round [)]paren
+      --  - yinq - [Y]ank [I]nside [N]ext [']quote
+      --  - ci'  - [C]hange [I]nside [']quote
+      require('mini.ai').setup { n_lines = 500 }
+    end,
+  },
+  {
+    'kylechui/nvim-surround',
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+  {
+    'michaeljsmith/vim-indent-object',
+  },
+  {
+    'inkarkat/vim-ReplaceWithRegister',
+    keys = {
+      { 'r', '<Plug>ReplaceWithRegisterOperator', desc = 'Replace with register' },
+      { 'r', '<Plug>ReplaceWithRegisterVisual', desc = 'Replace with register visual', mode = 'x' },
+      { 'rr', '<Plug>ReplaceWithRegisterLine', desc = 'Riplace with register line' },
+    },
+  },
+  { 'kana/vim-textobj-entire', dependencies = { 'kana/vim-textobj-user' } },
+  {
+    'vscode-neovim/vscode-multi-cursor.nvim',
+    event = 'VeryLazy',
+    cond = not not vim.g.vscode,
+    opts = {
+      default_mappings = false,
+    },
+  },
+}
