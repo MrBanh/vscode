@@ -10,7 +10,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- OPTIONS --
+------------------
+-- OPTIONS/CMDS --
+------------------
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -38,7 +40,9 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-------------
 -- KEYMAPS --
+-------------
 
 local set = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -66,47 +70,41 @@ set('x', 'K', ":move '<-2<CR>gv-gv", opts)
 set('n', 'J', 'mzJ`z')
 
 -- yank to system clipboard
-set({ 'n', 'v' }, '<leader>y', '"+y', opts)
+set({ 'n', 'v' }, '<leader>Y', '"+y', opts)
 
 -- paste from system clipboard
-set({ 'n', 'v' }, '<leader>p', '"+p', opts)
-
--- Moving past folds
-local function moveCursor(direction)
-  if vim.fn.reg_recording() == '' and vim.fn.reg_executing() == '' then
-    return ('g' .. direction)
-  else
-    return direction
-  end
-end
-
-set('n', 'k', function()
-  return moveCursor 'k'
-end, { expr = true, remap = true })
-set('n', 'j', function()
-  return moveCursor 'j'
-end, { expr = true, remap = true })
+set({ 'n', 'v' }, '<leader>P', '"+p', opts)
 
 if vim.g.vscode then
+  local vscode = require 'vscode'
+
+  -- Multi cursor
   set({ 'n', 'x', 'i' }, '<C-m>', function()
     require('vscode-multi-cursor').addSelectionToNextFindMatch()
   end)
 
-  local vscode = require 'vscode'
-
-  set({ 'n' }, 'gr', function()
-    vscode.call 'editor.action.referenceSearch.trigger'
+  -- LSP
+  set({ 'n' }, 'gI', function()
+    vscode.action 'editor.action.goToImplementation'
   end, opts)
-
-  set({ 'n' }, 'gt', function()
-    vscode.call 'editor.action.goToTypeDefinition'
+  set({ 'n' }, 'gd', function()
+    vscode.action 'editor.action.revealDefinition'
+  end, opts)
+  set({ 'n' }, 'gD', function()
+    vscode.action 'editor.action.revealDeclaration'
+  end, opts)
+  set({ 'n' }, 'gr', function()
+    vscode.action 'editor.action.goToReferences'
+  end, opts)
+  set({ 'n' }, 'gy', function()
+    vscode.action 'editor.action.goToTypeDefinition'
   end, opts)
 
   -- undo / redo
-  set({ 'n' }, 'u', function()
+  set({ 'n', 'v' }, 'u', function()
     vscode.call 'undo'
   end, opts)
-  set({ 'n' }, '<C-r>', function()
+  set({ 'n', 'v' }, '<C-r>', function()
     vscode.call 'redo'
   end, opts)
 
@@ -125,9 +123,40 @@ if vim.g.vscode then
   set({ 'n' }, '[h', function()
     vscode.call 'workbench.action.editor.previousChange'
   end, opts)
+
+  -- Fold/Unfold
+  set('n', 'zM', function()
+    vscode.action 'editor.foldAll'
+  end, opts)
+
+  set('n', 'zR', function()
+    vscode.action 'editor.unfoldAll'
+  end, opts)
+
+  set('n', 'zc', function()
+    vscode.action 'editor.fold'
+  end, opts)
+
+  set('n', 'zC', function()
+    vscode.action 'editor.foldRecursively'
+  end, opts)
+
+  set('n', 'zo', function()
+    vscode.action 'editor.unfold'
+  end, opts)
+
+  set('n', 'zO', function()
+    vscode.action 'editor.unfoldRecursively'
+  end, opts)
+
+  set('n', 'za', function()
+    vscode.action 'editor.toggleFold'
+  end, opts)
 end
 
+-------------
 -- PLUGINS --
+-------------
 require('lazy').setup {
   {
     'folke/flash.nvim',
