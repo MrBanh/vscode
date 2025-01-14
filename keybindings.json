@@ -392,5 +392,10 @@
   {
     "key": "ctrl+shift+m",
     "command": "bookmarks.listFromAllFiles"
-  }
+  },
+  {
+    "key": "Enter",
+    "command": "markdown.extension.checkTaskList",
+    "when": "editorLangId === 'markdown' && neovim.mode === 'normal'"
+  },
 ]
