@@ -393,7 +393,7 @@
     {
       "command": "workbench.view.scm",
       "keys": "g.G",
-      "name": "git source control",
+      "name": "Git source control",
       "type": "command"
     },
     {
@@ -411,13 +411,13 @@
     {
       "command": "gitlens.openCommitOnRemote",
       "keys": "g.o",
-      "name": "open commit on remote",
+      "name": "Open commit on remote",
       "type": "command"
     },
     {
       "command": "git.pull",
       "keys": "g.p",
-      "name": "pull",
+      "name": "Pull",
       "type": "command"
     },
     {
