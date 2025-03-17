@@ -62,12 +62,12 @@
       "command": "vscode-neovim.escape"
     }
   },
-  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "/mnt/c/Users/tonyb/AppData/Roaming/Code/User/nvim/init.lua",
+  "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
   "vscode-neovim.useWSL": true,
   "vscode-neovim.wslDistribution": "Ubuntu",
   "vscode_custom_css.imports": [
-    "file:///c:/Users/tonyb/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+    "file:///C:/Users/tonyb/AppData/Roaming/Code/User/custom/styles.css",
+    "file:///c:/Users/tonyb/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
   ],
   "whichkey.bindingOverrides": [
     {
@@ -136,15 +136,12 @@
       "type": "commands"
     },
     {
-      "commands": [
-        "editor.action.clipboardCopyAction",
-        "vscode-neovim.escape"
-      ],
+      "commands": ["editor.action.clipboardCopyAction", "vscode-neovim.escape"],
       "keys": "Y",
       "name": "Yank to clipboard",
       "type": "commands"
     },
-    
+
     // +BUFFER
     {
       "command": "workbench.action.closeOtherEditors",
@@ -170,7 +167,7 @@
       "name": "Unpin buffer",
       "type": "command"
     },
-    
+
     // +Code
     {
       "bindings": [
@@ -224,7 +221,7 @@
       "name": "+Code",
       "type": "bindings"
     },
-    
+
     // +DEBUG
     {
       "command": "editor.debug.action.conditionalBreakpoint",
@@ -303,7 +300,7 @@
       "keys": "d.o",
       "position": -1
     },
-    
+
     // +FIND
     {
       "keys": "f",
@@ -333,9 +330,7 @@
       "type": "command"
     },
     {
-      "commands": [
-        "workbench.action.findInFiles"
-      ],
+      "commands": ["workbench.action.findInFiles"],
       "keys": "f.w",
       "name": "Find word",
       "type": "commands"
@@ -352,7 +347,7 @@
           "name": "Format file",
           "type": "command",
           "command": "editor.action.formatDocument"
-        },
+        }
       ]
     },
     {
@@ -383,10 +378,10 @@
       "command": "workbench.view.explorer"
     },
     {
-        "keys": "F.T",
-        "name": "Show active file in tree/explorer view",
-        "type": "command",
-        "command": "workbench.files.action.showActiveFileInExplorer"
+      "keys": "F.T",
+      "name": "Show active file in tree/explorer view",
+      "type": "command",
+      "command": "workbench.files.action.showActiveFileInExplorer"
     },
     {
       "commands": [
@@ -398,9 +393,7 @@
       "type": "commands"
     },
     {
-      "commands": [
-        "workbench.action.localHistory.restoreViaPicker"
-      ],
+      "commands": ["workbench.action.localHistory.restoreViaPicker"],
       "keys": "F.X",
       "name": "Restore file",
       "type": "commands"
@@ -655,9 +648,7 @@
       "type": "command"
     },
     {
-      "commands": [
-        "workbench.action.findInFiles"
-      ],
+      "commands": ["workbench.action.findInFiles"],
       "keys": "s.w",
       "name": "Search word",
       "type": "commands"
@@ -687,7 +678,7 @@
       "keys": "w.M",
       "name": "Maximize Editor Group and Hide Sidebar",
       "type": "command"
-    },
+    }
   ],
   "whichkey.showIcons": true,
   "whichkey.sortOrder": "nonNumberFirst",
@@ -738,4 +729,31 @@
   "git.pullTags": false,
   "typeChallenges.workspaceFolder": "",
   "lazygit-vscode.autoMaximizeWindow": true,
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "chat.commandCenter.enabled": false
 }
