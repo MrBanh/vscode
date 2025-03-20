@@ -1,1 +1,77 @@
+/* Horizontal activity bar icons */
+#workbench\.parts\.sidebar .composite .composite-bar-container .composite-bar {
+  width: 100%;
+}
 
+#workbench\.parts\.sidebar
+  .composite
+  .composite-bar-container
+  .composite-bar
+  .monaco-action-bar
+  ul.actions-container {
+  justify-content: space-around;
+}
+
+.editor-widget.suggest-widget {
+  border: 1px solid #ffcc66;
+}
+
+.editor-widget.suggest-widget.shows-details.visible {
+  border: none;
+}
+
+.monaco-editor .scroll-decoration {
+  display: none !important;
+}
+
+.monaco-tl-row .monaco-tl-contents > div::after {
+  margin-bottom: auto;
+}
+
+.quick-input-list-entry .monaco-action-bar.quick-input-list-entry-action-bar {
+  align-self: center !important;
+}
+
+.quick-input-list-row div::before {
+  align-self: center !important;
+}
+
+.quick-input-widget {
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+}
+
+.suggest-details {
+  border: 1px solid #ffcc66 !important;
+}
+
+/** See: https://github.com/getcursor/cursor/issues/1570 */
+/** Restore the height of the activity bar element to the vscode default value */
+.monaco-workbench
+  .composite-bar
+  .monaco-action-bar:not(.vertical)
+  .action-item {
+  height: 35px !important;
+}
+
+/** Restore the progress icon position of the activity bar element to the vscode default value */
+.monaco-workbench .progress-badge > .badge-content:before {
+  transform: none !important;
+  left: 1px !important;
+  top: 1px !important;
+}
+
+/** Quick Open to show ellipsis on left instead so actual file name does not get truncated */
+.quick-input-list .monaco-icon-label-container {
+  display: flex;
+  align-items: center;
+}
+.quick-input-list .monaco-icon-description-container {
+  display: inline-block;
+  block-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  direction: rtl;
+  text-align: left;
+}
